@@ -3,219 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Poubelle Nickel - Lavage et désinfection de poubelles à domicile avec des produits naturels. Service de proximité rapide et efficace." />
-  <title>Poubelle Nickel | Lavage de poubelles à domicile - Atlas</title>
+  <title>Poubelle Nickel | Lavage de poubelles à domicile, Brive et alentours</title>
+  <meta name="description" content="Poubelle Nickel lave vos poubelles à domicile avec des produits naturels : je les récupère, je les lave à haute pression, je les ramène. 15 € la première poubelle, Brive et alentours." />
+  <meta name="theme-color" content="#12304f" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Poubelle Nickel | Lavage de poubelles à domicile" />
+  <meta property="og:description" content="Poubelles propres, simple et efficace. 15 € la première poubelle, 10 € de plus par poubelle supplémentaire." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312304f'/%3E%3Cpath d='M20 22h24l-2 26a3 3 0 0 1-3 3H25a3 3 0 0 1-3-3zM16 22h32M26 22v-4h12v4' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Poubelle Nickel",
+    "description": "Lavage de poubelles à domicile avec des produits naturels.",
+    "telephone": "+33787042046",
+    "areaServed": "Brive-la-Gaillarde et alentours",
+    "priceRange": "15 € la première poubelle, +10 € par poubelle supplémentaire"
+  }
+  </script>
 </head>
-<body>
+<body id="top">
 
-  <!-- HEADER & NAVIGATION -->
+  <!-- Pictogramme de poubelle réutilisé dans la page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="bin" viewBox="0 0 24 24">
+      <path d="M5 7h14l-1.2 12.4a2 2 0 0 1-2 1.6H8.2a2 2 0 0 1-2-1.6L5 7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M3.5 7h17M9 7V4.5h6V7M10 11v6M14 11v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand">
-        <span class="brand-title">POUBELLE NICKEL</span>
-        <span class="brand-sub">Atlas service de proximité</span>
+      <a class="brand" href="#top" aria-label="Poubelle Nickel, retour en haut de page">
+        <span class="brand-name">Poubelle <span class="brand-blue">Nickel</span></span>
       </a>
-      <nav class="main-nav">
-        <a href="#comment-ca-marche">Fonctionnement</a>
-        <a href="#engagements">Produits naturels</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#fonctionnement">Fonctionnement</a>
+        <a href="#soins">Les soins</a>
         <a href="#tarifs">Tarifs</a>
         <a href="#zone">Zone</a>
-        <a href="#reservation" class="btn-nav">Réserver</a>
       </nav>
+      <a class="btn btn-solid btn-small" href="tel:+33787042046">07 87 04 20 46</a>
     </div>
   </header>
 
-  <!-- HERO (ACCROCHE PRINCIPALE) -->
-  <section class="hero">
-    <div class="container hero-content">
-      <span class="badge">🌿 100 % Produits Naturels • Paiement après prestation</span>
-      <h1>Des poubelles propres, saines et sans mauvaises odeurs, sans effort.</h1>
-      <p class="hero-lead">
-        Fini la corvée du nettoyage au fond du jardin. Je récupère vos bacs devant chez vous, 
-        je les dégraisse à haute pression et je vous les ramène parfumés et prêts à l'emploi.
-      </p>
-      <div class="hero-actions">
-        <a href="#reservation" class="btn btn-primary">Estimer et réserver</a>
-        <a href="tel:0787042046" class="btn btn-secondary">📞 07 87 04 20 46</a>
-      </div>
-    </div>
-  </section>
+  <main>
 
-  <!-- COMMENT ÇA MARCHE -->
-  <section id="comment-ca-marche" class="section">
-    <div class="container">
-      <h2 class="section-title">Comment ça marche ?</h2>
-      <p class="section-subtitle">Un service simple, calé idéalement juste après le passage du camion-benne.</p>
-      
-      <div class="grid-3">
-        <div class="card step-card">
-          <div class="step-number">1</div>
-          <h3>Vous me contactez</h3>
-          <p>Par SMS, appel ou via le formulaire ci-dessous : nous fixons ensemble un créneau de passage.</p>
+    <!-- ACCROCHE -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Poubelles propres,<br /><span class="h1-blue">simple et efficace.</span></h1>
+          <p class="lead">
+            Je récupère vos poubelles devant chez vous, je les lave à haute pression avec des produits
+            naturels et je vous les ramène propres et parfumées. Vous n’avez rien à faire.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#reservation">Réserver un passage</a>
+            <a class="btn btn-outline" href="tel:+33787042046">Appeler</a>
+          </div>
+          <p class="hero-note">Paiement après prestation. Brive et alentours.</p>
         </div>
-        <div class="card step-card">
-          <div class="step-number">2</div>
-          <h3>Je prends vos poubelles</h3>
-          <p>Je récupère vos bacs directement devant votre domicile, repérés à votre adresse.</p>
-        </div>
-        <div class="card step-card">
-          <div class="step-number">3</div>
-          <h3>Je lave et je ramène</h3>
-          <p>Nettoyage complet, séchage/finition parfumée et remise en place. Vous ne payez qu'une fois le travail fini.</p>
+
+        <div class="hero-price" aria-label="Tarif de départ">
+          <p class="hp-amount">15&nbsp;€</p>
+          <p class="hp-label">la première poubelle</p>
+          <p class="hp-extra">+ 10&nbsp;€ par poubelle en plus</p>
+          <p class="hp-example">2 poubelles : 25&nbsp;€ · 3 poubelles : 35&nbsp;€</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- POUR CHAQUE POUBELLE (ENGAGEMENTS) -->
-  <section id="engagements" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Le soin apporté à chaque poubelle</h2>
-      <p class="section-subtitle">Efficace contre les bactéries et les résidus, doux pour l'environnement.</p>
-
-      <div class="grid-3">
-        <div class="card feature-card">
-          <div class="feature-icon">🧼</div>
-          <h3>Produits naturels</h3>
-          <p><strong>Savon noir et cristaux de soude :</strong> un dégraissage en profondeur sans produits chimiques agressifs.</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">💦</div>
-          <h3>Lavage haute pression</h3>
-          <p><strong>Fini les résidus collés</strong> au fond de la cuve, sur les parois et sous le couvercle.</p>
-        </div>
-        <div class="card feature-card">
-          <div class="feature-icon">🍋</div>
-          <h3>Finition fraîcheur</h3>
-          <p><strong>Vinaigre blanc et huile essentielle</strong> pour assainir durablement et laisser une odeur de frais.</p>
-        </div>
+    <!-- COMMENT ÇA MARCHE -->
+    <section id="fonctionnement" class="section">
+      <div class="container">
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <ol class="steps">
+          <li>
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Vous me contactez</h3>
+            <p>Par SMS, par appel ou avec le formulaire plus bas. On fixe un créneau ensemble.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Je prends vos poubelles</h3>
+            <p>Directement devant chez vous, repérées à votre adresse.</p>
+          </li>
+          <li>
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Je les lave et je les ramène</h3>
+            <p>Propres, à leur place, avec une bonne odeur de frais.</p>
+          </li>
+        </ol>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GRILLE TARIFAIRE -->
-  <section id="tarifs" class="section">
-    <div class="container">
-      <h2 class="section-title">Tarifs clairs et sans surprise</h2>
-      <p class="section-subtitle">Tous types de poubelles (ordures ménagères, tri sélectif, verre, compost). Paiement après prestation.</p>
-
-      <div class="grid-3 pricing-grid">
-        <div class="card price-card">
-          <h3>1 Poubelle</h3>
-          <div class="price">15 €</div>
-          <p class="price-detail">Passage ponctuel</p>
-          <ul class="price-list">
-            <li>✔ Dégraissage savon noir & soude</li>
-            <li>✔ Lavage haute pression</li>
-            <li>✔ Désinfection & parfum naturel</li>
-          </ul>
-        </div>
-
-        <div class="card price-card price-featured">
-          <span class="popular-tag">Le plus choisi</span>
-          <h3>2 Poubelles</h3>
-          <div class="price">25 €</div>
-          <p class="price-detail">Soit <strong>+ 10 €</strong> le bac supplémentaire</p>
-          <ul class="price-list">
-            <li>✔ Bac gris + Bac jaune (tri)</li>
-            <li>✔ Même passage, tarif réduit</li>
-            <li>✔ 3 poubelles : <strong>35 €</strong></li>
-          </ul>
-        </div>
-
-        <div class="card price-card">
-          <h3>Abonnement & Pros</h3>
-          <div class="price">Sur mesure</div>
-          <p class="price-detail">Tranquillité toute l'année</p>
-          <ul class="price-list">
-            <li>✔ Passage mensuel programmé</li>
-            <li>✔ Créneau prioritaire après collecte</li>
-            <li>✔ Copropriétés & pros : sur devis</li>
-          </ul>
-        </div>
+    <!-- LES SOINS -->
+    <section id="soins" class="section section-mist">
+      <div class="container">
+        <h2 class="section-title">Pour chaque poubelle</h2>
+        <ul class="care">
+          <li>
+            <svg class="care-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18C6 10 11 5 19 5c0 8-5 13-13 13z"/><path d="M6 18l7-7"/></svg>
+            <div>
+              <h3>Produits naturels</h3>
+              <p>Un nettoyage en profondeur qui respecte votre poubelle et l’environnement.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="care-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11z"/></svg>
+            <div>
+              <h3>Lavage haute pression</h3>
+              <p>Fini les résidus collés au fond, sur les parois et sous le couvercle.</p>
+            </div>
+          </li>
+          <li>
+            <svg class="care-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18 16v4M16 18h4"/></svg>
+            <div>
+              <h3>Finition fraîcheur</h3>
+              <p>Un dernier soin pour que vos poubelles sentent bon plus longtemps.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ZONE D'INTERVENTION -->
-  <section id="zone" class="section section-alt">
-    <div class="container zone-box">
-      <div>
-        <h2>📍 Zone d'intervention</h2>
-        <p>
-          Intervention de proximité sur <strong>[Nom de ton quartier / ta commune]</strong> et les alentours 
-          (rayon de 10 km). Tournées organisées les jours de collecte des ordures ménagères.
+    <!-- TARIFS -->
+    <section id="tarifs" class="section">
+      <div class="container tarifs-grid">
+        <div>
+          <h2 class="section-title left">Tarifs</h2>
+          <p class="tarifs-lead">
+            15&nbsp;€ la première poubelle, puis 10&nbsp;€ de plus par poubelle supplémentaire.
+            Ordures ménagères, tri, compost : tous les types de poubelles.
+          </p>
+          <div class="pro-box">
+            <h3>Abonnement mensuel et professionnels</h3>
+            <p>Un passage chaque mois, ou un besoin plus important : parlons-en, je vous fais un devis.</p>
+          </div>
+        </div>
+
+        <ul class="ladder" aria-label="Exemples de prix">
+          <li>
+            <span class="ladder-bins" aria-hidden="true"><svg><use href="#bin" /></svg></span>
+            <span class="ladder-name">1 poubelle</span>
+            <span class="ladder-price">15&nbsp;€</span>
+          </li>
+          <li>
+            <span class="ladder-bins" aria-hidden="true"><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg></span>
+            <span class="ladder-name">2 poubelles</span>
+            <span class="ladder-price">25&nbsp;€</span>
+          </li>
+          <li>
+            <span class="ladder-bins" aria-hidden="true"><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg></span>
+            <span class="ladder-name">3 poubelles</span>
+            <span class="ladder-price">35&nbsp;€</span>
+          </li>
+          <li>
+            <span class="ladder-bins" aria-hidden="true"><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg><svg><use href="#bin" /></svg></span>
+            <span class="ladder-name">4 poubelles</span>
+            <span class="ladder-price">45&nbsp;€</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ZONE -->
+    <section id="zone" class="section section-mist">
+      <div class="container zone">
+        <h2 class="section-title left">Où j’interviens</h2>
+        <p class="zone-text">
+          Brive et alentours, dans un rayon d’environ 10&nbsp;km. Écrivez-moi votre quartier ou votre
+          commune : je vous dis tout de suite si je peux passer et quand.
         </p>
       </div>
-      <div class="zone-badge">
-        <strong>Offre de lancement quartier</strong>
-        <span>Réservez votre premier passage dès maintenant</span>
+    </section>
+
+    <!-- RÉSERVATION -->
+    <section id="reservation" class="section">
+      <div class="container booking">
+        <div class="booking-info">
+          <h2 class="section-title left">Réserver un passage</h2>
+          <p>Choisissez le nombre de poubelles : vous voyez le prix tout de suite, puis votre message se prépare dans votre application SMS.</p>
+          <div class="contact">
+            <p class="contact-label">Vous préférez appeler ou écrire ?</p>
+            <a class="contact-phone" href="tel:+33787042046">07 87 04 20 46</a>
+            <p class="contact-note">Paiement après prestation, en espèces ou par virement.</p>
+          </div>
+        </div>
+
+        <form id="booking-form" class="booking-form" novalidate>
+          <div class="field">
+            <label for="nb">Nombre de poubelles</label>
+            <div class="stepper">
+              <button type="button" id="moins" aria-label="Une poubelle de moins">−</button>
+              <input id="nb" name="nb" type="number" inputmode="numeric" min="1" max="30" step="1" value="2" />
+              <button type="button" id="plus" aria-label="Une poubelle de plus">+</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="frequence">Type de passage</label>
+            <select id="frequence" name="frequence">
+              <option value="un passage ponctuel">Passage ponctuel</option>
+              <option value="un abonnement mensuel (1 passage par mois)">Abonnement mensuel (1 passage par mois)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="secteur">Votre commune ou quartier</label>
+            <input id="secteur" name="secteur" type="text" autocomplete="address-level2" placeholder="Par exemple : Brive, centre-ville" />
+          </div>
+
+          <div class="estimate" aria-live="polite">
+            <span>Estimation</span>
+            <strong id="total-price">25&nbsp;€</strong>
+          </div>
+          <p id="estimate-note" class="estimate-note">15&nbsp;€ + 10&nbsp;€ pour chaque poubelle en plus.</p>
+
+          <button type="submit" class="btn btn-solid btn-full">Préparer mon SMS</button>
+
+          <div id="sms-result" class="sms-result" hidden>
+            <p>Si votre application SMS ne s’est pas ouverte, copiez ce message et envoyez-le au 07&nbsp;87&nbsp;04&nbsp;20&nbsp;46 :</p>
+            <textarea id="sms-text" readonly rows="4"></textarea>
+            <button type="button" id="copier" class="btn btn-outline btn-small">Copier le message</button>
+            <span id="copie-ok" class="copy-ok" role="status"></span>
+          </div>
+        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SIMULATEUR & RÉSERVATION RAPIDE -->
-  <section id="reservation" class="section">
-    <div class="container booking-wrapper">
-      <div class="booking-info">
-        <h2>Réserver un passage</h2>
-        <p>Sélectionnez le nombre de poubelles à nettoyer pour obtenir votre estimation et préparer votre demande en un clic.</p>
-        
-        <div class="contact-direct">
-          <p><strong>Contact direct :</strong></p>
-          <p class="phone-big">📞 07 87 04 20 46</p>
-          <p class="small-note">Disponible par SMS ou appel. Paiement après prestation (Espèces, Virement, Chèque).</p>
-        </div>
-      </div>
+  </main>
 
-      <form id="booking-form" class="card booking-form">
-        <div class="form-group">
-          <label for="nb-bacs">Nombre de poubelles :</label>
-          <select id="nb-bacs" name="nb-bacs">
-            <option value="1">1 poubelle (15 €)</option>
-            <option value="2" selected>2 poubelles (25 €)</option>
-            <option value="3">3 poubelles (35 €)</option>
-            <option value="4">4 poubelles (45 €)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="frequence">Type de passage :</label>
-          <select id="frequence" name="frequence">
-            <option value="Passage ponctuel">Passage ponctuel</option>
-            <option value="Abonnement mensuel (1x/mois)">Abonnement mensuel (1x / mois)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="adresse">Votre rue / quartier :</label>
-          <input type="text" id="adresse" name="adresse" placeholder="Ex : Rue des Lilas..." required />
-        </div>
-
-        <div class="estimate-box">
-          <span>Total estimé :</span>
-          <strong id="total-price">25 €</strong>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-full">Préparer le SMS de réservation</button>
-        <p id="form-feedback" class="form-feedback"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER & MENTIONS LÉGALES -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>POUBELLE NICKEL</strong> — Atlas service de proximité<br />
-        <span>Tél. : 07 87 04 20 46</span>
+        <p class="footer-brand">Poubelle Nickel</p>
+        <p>Lavage de poubelles à domicile. Brive et alentours.</p>
       </div>
-      <div class="legal-info">
-        <p>Micro-entreprise • SIRET : en cours d'attribution</p>
-        <p>TVA non applicable, art. 293 B du CGI</p>
-      </div>
+      <a class="footer-phone" href="tel:+33787042046">07 87 04 20 46</a>
     </div>
+    <!--
+      À COMPLÉTER APRÈS LA CRÉATION DE LA MICRO-ENTREPRISE (mentions légales du site) :
+      nom et prénom de l’entrepreneur, numéro SIRET, adresse de contact, téléphone,
+      hébergeur du site (GitHub Pages). Vérifier les règles exactes avant de les afficher.
+    -->
   </footer>
 
   <script src="script.js"></script>
