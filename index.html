@@ -59,8 +59,8 @@
         <div class="hero-text">
           <h1>Poubelles propres,<br /><span class="h1-blue">simple et efficace.</span></h1>
           <p class="lead">
-            Je récupère vos poubelles devant chez vous, je les lave à haute pression avec des produits
-            naturels et je vous les ramène propres et parfumées. Vous n’avez rien à faire.
+            Bonjour, moi c’est Atlas. Je récupère vos poubelles devant chez vous, je les lave à haute pression
+            avec des produits naturels et je vous les ramène nickel. Vous n’avez rien à faire.
           </p>
           <div class="hero-actions">
             <a class="btn btn-solid" href="#reservation">Réserver un passage</a>
@@ -73,7 +73,7 @@
           <p class="hp-amount">15&nbsp;€</p>
           <p class="hp-label">la première poubelle</p>
           <p class="hp-extra">+ 10&nbsp;€ par poubelle en plus</p>
-          <p class="hp-example">2 poubelles : 25&nbsp;€ · 3 poubelles : 35&nbsp;€</p>
+          <p class="hp-example">2 poubelles : 25&nbsp;€ / 3 poubelles : 35&nbsp;€</p>
         </div>
       </div>
     </section>
@@ -188,7 +188,7 @@
       <div class="container booking">
         <div class="booking-info">
           <h2 class="section-title left">Réserver un passage</h2>
-          <p>Choisissez le nombre de poubelles : vous voyez le prix tout de suite, puis votre message se prépare dans votre application SMS.</p>
+          <p>Remplissez le formulaire : votre message se prépare dans votre application SMS, il ne vous reste qu’à l’envoyer. Rien n’est enregistré sur ce site.</p>
           <div class="contact">
             <p class="contact-label">Vous préférez appeler ou écrire ?</p>
             <a class="contact-phone" href="tel:+33787042046">07 87 04 20 46</a>
@@ -196,7 +196,7 @@
           </div>
         </div>
 
-        <form id="booking-form" class="booking-form" novalidate>
+        <form id="booking-form" class="booking-form">
           <div class="field">
             <label for="nb">Nombre de poubelles</label>
             <div class="stepper">
@@ -214,22 +214,51 @@
             </select>
           </div>
 
+          <div class="field-row">
+            <div class="field">
+              <label for="prenom">Prénom</label>
+              <input id="prenom" name="prenom" type="text" autocomplete="given-name" required />
+            </div>
+            <div class="field">
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" autocomplete="family-name" required />
+            </div>
+          </div>
+
           <div class="field">
-            <label for="secteur">Votre commune ou quartier</label>
-            <input id="secteur" name="secteur" type="text" autocomplete="address-level2" placeholder="Par exemple : Brive, centre-ville" />
+            <label for="adresse">Adresse</label>
+            <input id="adresse" name="adresse" type="text" autocomplete="street-address" placeholder="Numéro et rue" required />
+          </div>
+
+          <div class="field">
+            <label for="commune">Commune ou quartier</label>
+            <input id="commune" name="commune" type="text" autocomplete="address-level2" placeholder="Par exemple : Brive, centre-ville" required />
+          </div>
+
+          <div class="field">
+            <label for="collecte">Jour de collecte de vos poubelles <span class="optional">(facultatif)</span></label>
+            <select id="collecte" name="collecte">
+              <option value="">Je ne sais pas</option>
+              <option value="lundi">Lundi</option>
+              <option value="mardi">Mardi</option>
+              <option value="mercredi">Mercredi</option>
+              <option value="jeudi">Jeudi</option>
+              <option value="vendredi">Vendredi</option>
+              <option value="samedi">Samedi</option>
+            </select>
           </div>
 
           <div class="estimate" aria-live="polite">
             <span>Estimation</span>
             <strong id="total-price">25&nbsp;€</strong>
           </div>
-          <p id="estimate-note" class="estimate-note">15&nbsp;€ + 10&nbsp;€ pour chaque poubelle en plus.</p>
+          <p id="estimate-note" class="estimate-note" hidden></p>
 
           <button type="submit" class="btn btn-solid btn-full">Préparer mon SMS</button>
 
           <div id="sms-result" class="sms-result" hidden>
             <p>Si votre application SMS ne s’est pas ouverte, copiez ce message et envoyez-le au 07&nbsp;87&nbsp;04&nbsp;20&nbsp;46 :</p>
-            <textarea id="sms-text" readonly rows="4"></textarea>
+            <textarea id="sms-text" readonly rows="7"></textarea>
             <button type="button" id="copier" class="btn btn-outline btn-small">Copier le message</button>
             <span id="copie-ok" class="copy-ok" role="status"></span>
           </div>
@@ -248,9 +277,11 @@
       <a class="footer-phone" href="tel:+33787042046">07 87 04 20 46</a>
     </div>
     <!--
-      À COMPLÉTER APRÈS LA CRÉATION DE LA MICRO-ENTREPRISE (mentions légales du site) :
-      nom et prénom de l’entrepreneur, numéro SIRET, adresse de contact, téléphone,
-      hébergeur du site (GitHub Pages). Vérifier les règles exactes avant de les afficher.
+      MENTIONS LÉGALES : À DÉCOMMENTER le jour où ta déclaration d’activité est déposée
+      (« en cours d’attribution » n’est vrai qu’à partir de ce moment-là). Vérifie les règles exactes
+      sur le guichet unique des entreprises avant de publier.
+
+      <p class="legal">Océane Menigaud, EI · SIRET : en cours d’attribution · TVA non applicable, art. 293 B du CGI</p>
     -->
   </footer>
 
