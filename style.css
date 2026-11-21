@@ -216,6 +216,8 @@ ul, ol { list-style: none; }
 .booking-form { padding: 28px; border: 2px solid var(--navy); border-radius: 14px; background: var(--white); }
 .field { margin-bottom: 20px; }
 .field label { display: block; margin-bottom: 6px; font-weight: 700; font-size: .98rem; }
+.field-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.optional { font-weight: 400; color: var(--ink-soft); }
 .field input, .field select {
   width: 100%;
   padding: 12px 14px;
@@ -225,6 +227,7 @@ ul, ol { list-style: none; }
   color: var(--navy);
   background: var(--white);
 }
+.field input:user-invalid { border-color: #b3261e; }
 .field input:focus, .field select:focus { border-color: var(--blue); outline: none; box-shadow: 0 0 0 3px rgba(23, 102, 179, .25); }
 
 .stepper { display: grid; grid-template-columns: 52px 1fr 52px; gap: 8px; }
@@ -250,7 +253,9 @@ ul, ol { list-style: none; }
   border: 2px solid var(--line);
 }
 .estimate strong { font-family: var(--display); font-size: 2.2rem; line-height: 1; font-weight: 400; }
-.estimate-note { margin: 8px 0 20px; font-size: .92rem; color: var(--ink-soft); }
+.estimate { margin-bottom: 20px; }
+.estimate-note { margin: -10px 0 20px; font-size: .92rem; color: var(--ink-soft); }
+.estimate-note[hidden] { display: none; }
 
 .sms-result { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
 .sms-result p { font-size: .95rem; color: var(--ink-soft); margin-bottom: 8px; }
@@ -288,6 +293,7 @@ ul, ol { list-style: none; }
 }
 
 @media (max-width: 420px) {
+  .field-row { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .brand-name { font-size: 1.4rem; }
   .btn-small { padding: 8px 12px; font-size: .9rem; }
   .booking-form { padding: 20px; }
