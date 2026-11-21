@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const moins = document.getElementById("moins");
   const plus = document.getElementById("plus");
   const frequenceSelect = document.getElementById("frequence");
-  const secteurInput = document.getElementById("secteur");
+  const prenomInput = document.getElementById("prenom");
+  const nomInput = document.getElementById("nom");
+  const adresseInput = document.getElementById("adresse");
+  const communeInput = document.getElementById("commune");
+  const collecteSelect = document.getElementById("collecte");
   const totalEl = document.getElementById("total-price");
   const noteEl = document.getElementById("estimate-note");
   const form = document.getElementById("booking-form");
@@ -32,16 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function mettreAJour() {
     const nb = lireNombre();
-    const total = calculerPrix(nb);
-    totalEl.textContent = total + "\u00a0€";
+    totalEl.textContent = calculerPrix(nb) + "\u00a0€";
 
+    // Une note n’est affichée que pour l’abonnement
     const abonnement = frequenceSelect.selectedIndex === 1;
     if (abonnement) {
       noteEl.textContent = "Tarif par passage. Le prix de l’abonnement est confirmé avec vous par SMS.";
-    } else if (nb === 1) {
-      noteEl.textContent = PRIX_PREMIERE + "\u00a0€ pour la première poubelle.";
+      noteEl.hidden = false;
     } else {
-      noteEl.textContent = PRIX_PREMIERE + "\u00a0€ + " + PRIX_SUPPLEMENT + "\u00a0€ pour chaque poubelle en plus.";
+      noteEl.textContent = "";
+      noteEl.hidden = true;
     }
   }
 
@@ -62,18 +66,28 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    // Le navigateur bloque l’envoi si prénom, nom, adresse ou commune sont vides
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
     const nb = lireNombre();
     nbInput.value = nb;
     const total = calculerPrix(nb);
-    const frequence = frequenceSelect.value;
-    const secteur = secteurInput.value.trim();
 
-    let message =
-      "Bonjour, je souhaite réserver " + frequence + " pour " +
-      nb + " poubelle" + (nb > 1 ? "s" : "") +
-      " (estimation : " + total + " €).";
-    if (secteur) message += " Secteur : " + secteur + ".";
-    message += " Quand pouvez-vous passer ?";
+    const lignes = [
+      "Bonjour Atlas,",
+      "je souhaite réserver " + frequenceSelect.value + " pour " + nb + " poubelle" + (nb > 1 ? "s" : "") +
+        " (estimation : " + total + " €).",
+      "Nom : " + prenomInput.value.trim() + " " + nomInput.value.trim(),
+      "Adresse : " + adresseInput.value.trim() + ", " + communeInput.value.trim()
+    ];
+    if (collecteSelect.value) {
+      lignes.push("Jour de collecte : " + collecteSelect.value);
+    }
+    lignes.push("Quand pouvez-vous passer ?");
+    const message = lignes.join("\n");
 
     // Le message est toujours affiché, pour pouvoir le copier si l’appli SMS ne s’ouvre pas
     smsText.value = message;
